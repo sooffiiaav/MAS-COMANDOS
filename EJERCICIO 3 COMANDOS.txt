@@ -1,0 +1,180 @@
+
+C:\Users\velar>git clone https://github.com/asalber/libro-git.git
+fatal: destination path 'libro-git' already exists and is not an empty directory.
+
+C:\Users\velar>cd libro-git
+
+C:\Users\velar\libro-git>git reset --hard 48ed8
+HEAD is now at 48ed886 Añadido capítulo 5 al índice.
+
+C:\Users\velar\libro-git>git remote remove origin
+error: No such remote: 'origin'
+
+C:\Users\velar\libro-git>git branch bibliografia
+
+C:\Users\velar\libro-git>git branch -av
+  bibliografia 48ed886 Añadido capítulo 5 al índice.
+* master       48ed886 Añadido capítulo 5 al índice.
+
+C:\Users\velar\libro-git>mkdir capitulos/capitulo4.txt
+La sintaxis del comando no es correcta.
+
+C:\Users\velar\libro-git>echo capitulos/capitulo4.txt
+capitulos/capitulo4.txt
+
+C:\Users\velar\libro-git>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+C:\Users\velar\libro-git>echo "Patata" >> capitulos/capitulo4.txt
+
+C:\Users\velar\libro-git>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+C:\Users\velar\libro-git>git add capitulos/capitulo4.txt
+
+C:\Users\velar\libro-git>git commit -m "Añadido capitulo 4"
+[master e3335cf] Añadido capitulo 4
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo4.txt
+
+C:\Users\velar\libro-git>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\velar\libro-git>git checkout bibliografia
+Switched to branch 'bibliografia'
+
+C:\Users\velar\libro-git>echo bibliografia.txt
+bibliografia.txt
+
+C:\Users\velar\libro-git>eecho "ChacoN, S. and Straub,B. Pro Git.Apress">> b
+ibliografia.txt
+"eecho" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\velar\libro-git>echo "Chacon, S. and Straub, B.Pro Git.Apress" >>bi
+bliografia.txt
+
+C:\Users\velar\libro-git>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+C:\Users\velar\libro-git>git add bibliografia.txt
+
+C:\Users\velar\libro-git>git commit -m "Añadida primera referencia bibliogra
+fica"
+[bibliografia c9480de] Añadida primera referencia bibliografica
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bibliografia.txt
+
+C:\Users\velar\libro-git>get status
+"get" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\velar\libro-git>git status
+On branch bibliografia
+nothing to commit, working tree clean
+
+C:\Users\velar\libro-git>git log --oneline
+c9480de (HEAD -> bibliografia) Añadida primera referencia bibliografica
+48ed886 Añadido capítulo 5 al índice.
+34779bb Añadido capítulo 3.
+fb7debc Añadido capítulo 2.
+0244283 Añadido capítulo 1.
+8c80810 Añadido capítulo 3 sobre gestión de ramas al índice.
+bd7f788 Añadido índice del libro.
+
+C:\Users\velar\libro-git>git checkout bibliografia
+Already on 'bibliografia'
+
+C:\Users\velar\libro-git>git checkout bibliografia.txt
+Updated 0 paths from the index
+
+C:\Users\velar\libro-git>echo "Ryan Hodson. Ry's Git Tutorial. Smashwords (2
+014)" >> bibliografia.txt
+
+C:\Users\velar\libro-git>git commit -m "Añadida nueva referencia bibliografi
+ca"
+On branch bibliografia
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bibliografia.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\velar\libro-git>git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        bibliografia.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\velar\libro-git>echo master
+master
+
+C:\Users\velar\libro-git>git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        bibliografia.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\velar\libro-git>git checkout bibliografia.txt
+Updated 1 path from the index
+
+C:\Users\velar\libro-git>echo "Loeliger, J.and McCullough, M. Version contro
+l with Git O'Reilly" >> bibliografia.txt
+
+C:\Users\velar\libro-git>git commit -m "Añadida nueva referencia bibliografi
+ca"
+On branch bibliografia
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bibliografia.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\velar\libro-git>git commit -a "Añadida nueva referencia bibliografi
+ca"
+fatal: paths 'Añadida nueva referencia bibliografica ...' with -a does not make sense
+
+C:\Users\velar\libro-git>git add "Añadida nueva referencia bibliografica"
+fatal: pathspec 'Añadida nueva referencia bibliografica' did not match any files
+
+C:\Users\velar\libro-git>cd master
+El sistema no puede encontrar la ruta especificada.
+
+C:\Users\velar\libro-git>echo master
+master
+
+C:\Users\velar\libro-git>cd master
+El sistema no puede encontrar la ruta especificada.
+
+C:\Users\velar\libro-git>git merge bibliografia master
+Merge made by the 'ort' strategy.
+ capitulos/capitulo4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo4.txt
+
+C:\Users\velar\libro-git>echo "Hodson, R. Ry's Git Tutorial. Smashwords (201
+4)" >> bibliografia.txt
+
+C:\Users\velar\libro-git>git commit -m "Resuelto conflicto de bibliografica"
+
+On branch bibliografia
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bibliografia.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\velar\libro-git>
